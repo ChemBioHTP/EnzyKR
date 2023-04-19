@@ -1,0 +1,6 @@
+rdkit-pypi
+pytorch
+scikit-learn
+numpy
+pandas
+
