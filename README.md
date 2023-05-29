@@ -1,29 +1,28 @@
-The EnzyKR is the deep learning framework for the activation free energy prediction of the enzyme-substrate complexes .
+The EnzyKR is the deep learning framework for the activation free energy prediction of the enzyme-substrate complexes.
 
-
-if you want to use the pretrained model to predict the data please prepare the file as the shown in the input 
-```python
-$python inference.py ./test/data.tsv
+## Getting Started
+### Prerequisites
+```bash
+conda create -n kr python=3.8
+conda install pytorch::pytorch pandas numpy
+pip install torch_geometric, rdkit-pypi, bidirectional_cross_attention
 ```
 
-if you want to retrain the model from the scratch. Please run the code with the following lines
+The model need to take the enzyme multiple sequence alignment, enzyme-substrate structural complexes as inputs. User can put the pdb files under the structures folder  and put the MSA files in a3m format under the msa folder. A3M files can be obtained from [HH-bilts](https://toolkit.tuebingen.mpg.de/tools/hhblits) webserver
+
+Also a input of the SMILES string substrates need to provide under the raw folder  as the csv format. The example is shown under raw folder. 
+
+And then run python scripts
 ```python
-$python enzykr_bn.py 
+python preprocess.py
 ```
 
-## ToDo
-- [x] Finshed the model.py cleaning with three different module graphNN, convolution, and attention part.
-- [x] Finished the embedding module for both enzyme sequence and SMILES strings.
-- [x] Finished the baseline model adopted from the DLKcat.
+The output of the features are under the processed folder.
 
-- [ ] Need to reformate the distance scripts for the enzyme-substrate interaction map generation. 
-- [ ] Need to reformate the tool scripts for print the attention map in the model
-- [ ] Need to reformate the dataloader in the model scripts
-- [ ] Need to update the comparsion model for the binding SOTA affinity prediction
-- [ ] Need to provide a inference script for the baseline model which can run the test set with params
+And running the inference model to predict the activation free energy.
 
-Estimation finished by Friday with the following scripts
-
-
+```python
+python inference.py --dataset ./ --model_path ./model/model1.pt
+```
 
 
