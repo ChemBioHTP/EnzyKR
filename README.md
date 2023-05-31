@@ -5,7 +5,7 @@ The EnzyKR is the deep learning framework for the activation free energy predict
 ```bash
 conda create -n kr python=3.8
 conda install pytorch::pytorch pandas numpy
-pip install torch_geometric, rdkit-pypi, bidirectional_cross_attention
+pip install torch_geometric rdkit-pypi bidirectional_cross_attention
 ```
 
 The model need to take the enzyme multiple sequence alignment, enzyme-substrate structural complexes as inputs. User can put the pdb files under the structures folder  and put the MSA files in a3m format under the msa folder. A3M files can be obtained from [HH-bilts](https://toolkit.tuebingen.mpg.de/tools/hhblits) webserver
