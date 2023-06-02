@@ -11,7 +11,7 @@ pip install torch_geometric rdkit-pypi bidirectional_cross_attention
 
 The model need to take the enzyme multiple sequence alignment, enzyme-substrate structural complexes as inputs. User can put the pdb files under the structures folder  and put the MSA files in a3m format under the msa folder. A3M files can be obtained from [HH-bilts](https://toolkit.tuebingen.mpg.de/tools/hhblits) webserver
 
-Also a input of the SMILES string substrates need to provide under the raw folder  as the csv format. The example is shown under raw folder. 
+Also a input of the SMILES string substrates need to provide under the raw folder  as the csv format. The example is shown under raw folder. However, the enzyme sequence column and dg++ column are not necessary. 
 
 The model params need to download first from the google drive. The download instruction is under the model folder
 
