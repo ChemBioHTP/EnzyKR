@@ -5,7 +5,7 @@ import torch.nn as nn
 from torch_geometric.data import DataLoader
 import argparse
 from scripts.dataloader import *
-from model import EnzyKR
+from model.src.model import EnzyKR
 
 device = device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
