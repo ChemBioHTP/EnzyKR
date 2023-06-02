@@ -4,7 +4,8 @@ The EnzyKR is the deep learning framework for the activation free energy predict
 ### Prerequisites
 ```bash
 conda create -n kr python=3.8
-conda install pytorch::pytorch pandas numpy
+conda install pytorch::pytorch 
+conda install pandas numpy
 pip install torch_geometric rdkit-pypi bidirectional_cross_attention
 ```
 
