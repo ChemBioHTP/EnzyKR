@@ -13,6 +13,8 @@ The model need to take the enzyme multiple sequence alignment, enzyme-substrate 
 
 Also a input of the SMILES string substrates need to provide under the raw folder  as the csv format. The example is shown under raw folder. 
 
+The model params need to download first from the google drive. The download instruction is under the model folder
+
 And then run python scripts
 ```python
 python preprocess.py
